@@ -77,6 +77,25 @@ function initWebsiteFunctionality() {
     });
 }
 
+    // 7. Mobile Navbar Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link (mobile UX improvement)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                hamburger.classList.remove('active');
+            });
+        });
+    }
+
 // Start the preloader when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = 'hidden';
