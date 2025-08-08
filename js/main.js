@@ -60,6 +60,7 @@ function initWebsiteFunctionality() {
     initAboutSection();
     initAchievementsCounters();
     initTestimonialsCarousel();
+    initServicesSection(); // Add this line to initialize services
     handleContactForm();
     handleNewsletterForm();
 
